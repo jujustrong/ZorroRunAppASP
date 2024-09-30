@@ -26,6 +26,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/jarmstrong/Desktop/repos/ZorroASP/Views/Run/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUnVuL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jarmstrong/Desktop/repos/ZorroASP/Views/Run/LogRun.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUnVuL0xvZ1J1bi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jarmstrong/Desktop/repos/ZorroASP/Views/Run/UpdateRun.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUnVuL1VwZGF0ZVJ1bi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jarmstrong/Desktop/repos/ZorroASP/Views/Run/ViewRun.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUnVuL1ZpZXdSdW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/jarmstrong/Desktop/repos/ZorroASP/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

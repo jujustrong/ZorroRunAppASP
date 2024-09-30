@@ -1,0 +1,37 @@
+@model IEnumerable<Run>
+
+<h1>Workout Log</h1>
+
+<div style="display: block">
+    <a href="/Run/LogRun/">Log A New Workout</a>
+</div>
+
+<div class="container mt-4">
+    <h2>Your Past Runs</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Elevation</th>
+            <th>Location</th>
+            <th>Mileage</th>
+            <th>Heart Rate</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var run in Model)
+        {
+            <tr>
+            <td><a href=/Run/ViewRun/@run.ID>@run.ID</a></td>
+                <td>@run.TypeID</td>
+                <td>@run.Elevation</td>
+                <td>@run.Location</td>
+                <td>@run.Mileage</td>
+                <td>@run.HeartRate</td>
+                <td>@run.Date.ToString("MM/dd/yyyy")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

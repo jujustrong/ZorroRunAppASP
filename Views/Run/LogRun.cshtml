@@ -1,0 +1,42 @@
+@model Run
+
+<div class="container">
+    <h2>Log a New Run</h2>
+    @using (Html.BeginForm("LogRunToDatabase", "Run", "Post"))
+    {
+        <div class="form-group">
+            <label for="Date">Date</label>
+            <input type="date" class="form-control" asp-for="Date" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="">Select A Run Type</label>
+            <select class="form-control" name="TypeID" value="">
+                @foreach (var type in Model.RunTypes)
+                {
+                    <option value="@type.TypeID">@type.TypeID @type.Name</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Elevation">Elevation (m)</label>
+            <input type="number" class="form-control" asp-for="Elevation" required/>
+        </div>
+        <div class="form-group">
+            <label for="Location">Location</label>
+            <input type="text" class="form-control" asp-for="Location" required/>
+        </div>
+        <div class="form-group">
+            <label for="Mileage">Mileage (km)</label>
+            <input type="number" class="form-control" asp-for="Mileage" required/>
+        </div>
+        <div class="form-group">
+            <label for="HeartRate">Heart Rate (bpm)</label>
+            <input type="number" class="form-control" asp-for="HeartRate" required/>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Log Run</button>
+    }
+    
+</div>

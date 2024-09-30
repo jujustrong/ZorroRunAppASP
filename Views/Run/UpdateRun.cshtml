@@ -1,0 +1,32 @@
+@model Run
+
+<h2>Update Run # @Model.ID</h2>
+
+@using (Html.BeginForm("UpdateRunToDatabase", "Run", "Post"))
+{
+    <input asp-for="ID" type="hidden" value="@Model.ID" />
+
+    <label asp-for="UserID" class="control-label">Change User ID:</label>
+    <input type="text" name="UserID" class="form-control" value="@Model.UserID" />
+
+    <label asp-for="Date" class="control-label">Change Date:</label>    
+    <input type="number" step="1" name="Date" class="form-control" value="@Model.Date" />
+    
+    <label asp-for="Elevation" class="control-label">Adjust Elevation:</label>    
+    <input type="number" step="1" name="Elevation" class="form-control" value="@Model.Elevation" />
+    
+    <label asp-for="Location" class="control-label">Change Location:</label>    
+    <input type="text" name="Elevation" class="form-control" value="@Model.Elevation" />
+    
+    <label asp-for="Mileage" class="control-label">Adjust Mileage:</label>    
+    <input type="number" step="0.01" name="Mileage" class="form-control" value="@Model.Mileage" />
+    
+    <label asp-for="HeartRate" class="control-label">Adjust Heart Rate:</label>    
+    <input type="number" step="1" name="HeartRate" class="form-control" value="@Model.HeartRate" />
+    
+    <label asp-for="TypeID" class="control-label">Change Run Type: (1 = Easy Run, 2 = Long Run, 
+        3 = Tempo Run, 4 = Speed Workout, 5 = Hill Workout, 6 = Race, 7 = Other</label>    
+    <input type="number" step="1" name="TypeID" class="form-control" value="@Model.TypeID" />
+
+    <input type="submit" value="Update Run" class="btn btn-primary" />
+}

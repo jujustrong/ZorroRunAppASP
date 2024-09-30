@@ -1,7 +1,21 @@
+using System.Data;
+using ZorroASP.data;
+using MySql.Data.MySqlClient;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IDbConnection>((s) =>
+{
+    IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("zorro"));
+    conn.Open();
+    return conn;
+});
+
+
+builder.Services.AddTransient<IRunRepo, RunRepo>();
 
 var app = builder.Build();
 
