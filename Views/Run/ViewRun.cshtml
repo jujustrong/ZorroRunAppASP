@@ -1,37 +1,40 @@
-@model Run
+@model ZorroASP.Models.Run
 
-<h3>@Model.Date Information</h3>
+@{
+    ViewBag.Title = "Run Details";
+}
 
-<table class="table">
-    <tr>
-        <th>User ID</th>
-        <th>Type ID</th>
-        <th>Date</th>
-        <th>Location</th>
-        <th>Mileage</th>
-        <th>Elevation</th>
-        <th>Heart Rate</th>
-    </tr>
-    <tr>
-        <td>@Model.UserID</td>
-        <td>@Model.TypeID</td>
-        <td>@Model.Date</td>
-        <td>@Model.Location</td>
-        <td>@Model.Mileage</td>
-        <td>@Model.Elevation</td>
-        <td>@Model.HeartRate</td>
-    </tr>
-</table>
 
-<div style="display: block">
-    <a href="/Run/UpdateRun/@Model.ID">Edit Run</a>
+
+<div class="container">
+    
+    <div class="run-details">
+        <h3>Details for @Model.RunType Run on @Model.Date.DayOfWeek @Model.Date.ToShortDateString()</h3>
+        
+        <div class="detail">
+            <span>Location: </span> @Model.Location
+        </div>
+        <div class="detail">
+            <span>Distance: </span> @Model.Distance miles
+        </div>
+        <div class="detail">
+            <span>Elevation Gain: </span> @Model.ElevationGain feet
+        </div>
+        <div class="detail">
+            <span>Avg Heart Rate: </span> @Model.HeartRate bpm
+        </div>
+        <div style="display: block">
+            <a href="/Run/UpdateRun/@Model.Id" class="btn btn-secondary viewbtn">Edit Run</a>
+
+        
+            @using (Html.BeginForm("DeleteRun", "Run", "Post"))
+            {
+                <input type="hidden" asp-for="Id" value="@Model.Id" />
+                <input type="submit" class="btn btn-danger viewbtndgr" onclick="return confirm('Are you sure?')" value="Delete Run" />
+            }
+        </div>
+        
+    </div>
+    
 </div>
 
-<div style="display: block">
-
-    @using (Html.BeginForm("DeleteRun", "Run", "Post"))
-    {
-        <input type="hidden" asp-for="ID" value="@Model.ID" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this product" />
-    }
-</div>

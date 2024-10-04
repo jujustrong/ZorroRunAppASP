@@ -2,21 +2,198 @@ html {
   font-size: 14px;
 }
 
+#navbar {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(39,107,126,0.5074404761904762) 37%, rgba(121,177,182,1) 100%);
+  text-align: center;
+}
+
+.navlinks {
+  font-size: 20px;
+  font-family: 'Frosty';
+  display: flex;
+  text-align: center;
+  list-style-type: none;
+  color: white;
+}
+
+.navlinks a {
+  display: flex;
+  color: white;
+}
+
+#nav-img {
+  width: 6rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+body {
+  background: url(../imgs/mistymountain.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 50%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 900px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+form .form-control {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: 15px;
+  color: #f5f5f5;
+}
+
+.btn-primary {
+  background-color: #fc4c02;
+  border-color: #fc4c02;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #e04302;
+  border-color: #e04302;
+}
+
+.cnclbtn {
+  color: white;
+  padding: 9px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.viewbtndgr {
+  display: inline-block;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.viewbtn {
+  display: inline-block;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.logbtn {
+  margin: 10px;
+  margin-left: 0;
+}
+
+.btn-sm {
+  margin-right: 5px;
+}
+
+.run-details {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.run-details h3 {
+  margin-bottom: 15px;
+  color: #fc4c02;
+}
+
+.run-details .detail {
+  margin-bottom: 10px;
+}
+
+.run-details .detail span {
+  font-weight: bold;
+  color: #333;
+}
+
+.homepagepic {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+footer {
+  background: rgb(121,177,182);
+  background: linear-gradient(90deg, rgba(121,177,182,0.6951155462184874) 0%, rgba(39,107,126,0.5074404761904762) 37%, rgba(0,0,0,0.6839110644257703) 100%);
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  z-index: 99;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
+
+  .container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .homepagepic {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
 }

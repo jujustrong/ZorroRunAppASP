@@ -7,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IDbConnection>((s) =>
+builder.Services.AddScoped<MySqlConnection>((s) =>
 {
-    IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("zorro"));
+    MySqlConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("zorro"));
     conn.Open();
     return conn;
 });

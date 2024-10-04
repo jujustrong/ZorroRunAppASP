@@ -9,10 +9,21 @@
     <ItemGroup>
       <PackageReference Include="Dapper" Version="2.1.35" />
       <PackageReference Include="MySql.Data" Version="9.0.0" />
+      <PackageReference Include="MySql.Data.NET40" Version="1.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\ViewRuns\ViewRuns.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\imgs\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="MySql.Data">
+        <HintPath>..\..\..\Downloads\MySql.Data_x86\MySql.Data.DLL</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

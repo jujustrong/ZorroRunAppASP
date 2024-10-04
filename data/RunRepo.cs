@@ -1,63 +1,51 @@
 using System.Data;
 using Dapper;
+using MySql.Data.MySqlClient;
 using ZorroASP.Models;
 
 namespace ZorroASP.data;
 
 public class RunRepo : IRunRepo
 {
-    private readonly IDbConnection _connection;
+    private readonly MySqlConnection _connection;
 
-    public RunRepo(IDbConnection connection)
+    public RunRepo(MySqlConnection connection)
     {
         _connection = connection;
     }
-    public IEnumerable<Run> GetRuns()
+    public IEnumerable<Run> GetAllRuns()
     {
         return _connection.Query<Run>("SELECT * FROM Runs;");
     }
 
     public Run GetRun(int id)
     {
-        return _connection.QuerySingle<Run>("SELECT * FROM Runs WHERE ID = @id", new {id});
+        return _connection.QuerySingle<Run>("SELECT * FROM Runs WHERE Id = @id", new {id});
+    }
+    
+    public void LogRun(Run run)
+    {
+        _connection.Execute("INSERT INTO Runs (Date, ElevationGain, Location, Distance, HeartRate, RunType) " +
+                            "VALUES (@date, @elevationGain, @location, @distance, @heartRate, @runType);", new
+        {
+            date = run.Date, elevationGain = run.ElevationGain, location = run.Location, 
+            distance = run.Distance, heartRate = run.HeartRate, runType = run.RunType
+        });
     }
 
     public void UpdateRun(Run run)
     {
-        _connection.Execute("UPDATE Runs SET Date = @date, Elevation = @elevation, Location = @location, " +
-                            "Mileage = @mileage, HeartRate = @heartRate WHERE ID = @id", new
+        _connection.Execute("UPDATE Runs SET Date = @date, ElevationGain = @elevationGain, Location = @location, " +
+                            "Distance = @distance, HeartRate = @heartRate, RunType = @runType WHERE Id = @id", new
         {
-            date = run.Date, elevation = run.Elevation, location = run.Location, mileage = run.Mileage, 
-            heartRate = run.HeartRate
+            date = run.Date, elevationGain = run.ElevationGain, location = run.Location, distance = run.Distance, 
+            heartRate = run.HeartRate, runType = run.RunType, id = run.Id
         });
     }
 
-    public void LogRun(Run runToLog)
+    public void DeleteRun(int id)
     {
-        _connection.Execute("INSERT INTO Runs (UserID, Date, Elevation, Location, Mileage, HeartRate) " +
-                            "VALUES (@userID, @date, @elevation, @location, @mileage, @heartRate);", new
-        {
-            date = runToLog.Date, elevation = runToLog.Elevation, location = runToLog.Location, 
-            mileage = runToLog.Mileage, heartRate = runToLog.HeartRate, userID = runToLog.UserID
-        });
-    }
-    
-    public IEnumerable<RunType> GetRunTypes()
-    {
-        return _connection.Query<RunType>("SELECT * FROM RunTypes;");
-    }
-
-    public Run AssignRunType()
-    {
-        var typeList = GetRunTypes();
-        var run = new Run();
-        run.RunTypes = typeList;
-        return run;
-    } 
-
-    public void DeleteRun(Run run)
-    {
-        _connection.Execute("DELETE FROM runs WHERE ID = @id;", new { id = run.ID });
-        _connection.Execute("DELETE FROM Users WHERE ID = @id;", new { id = run.ID });
+        _connection.Execute("DELETE FROM Runs WHERE Id = @Id;", new { Id = id });
+        // _connection.Execute("DELETE FROM runs WHERE DATE = @date;", new { date = run.Date });
     }
 }

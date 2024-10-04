@@ -1,42 +1,40 @@
-@model Run
+@model ZorroASP.Models.Run
 
 <div class="container">
-    <h2>Log a New Run</h2>
-    @using (Html.BeginForm("LogRunToDatabase", "Run", "Post"))
-    {
-        <div class="form-group">
-            <label for="Date">Date</label>
-            <input type="date" class="form-control" asp-for="Date" required/>
-        </div>
-
-        <div class="form-group">
-            <label for="">Select A Run Type</label>
-            <select class="form-control" name="TypeID" value="">
-                @foreach (var type in Model.RunTypes)
-                {
-                    <option value="@type.TypeID">@type.TypeID @type.Name</option>
-                }
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="Elevation">Elevation (m)</label>
-            <input type="number" class="form-control" asp-for="Elevation" required/>
-        </div>
-        <div class="form-group">
-            <label for="Location">Location</label>
-            <input type="text" class="form-control" asp-for="Location" required/>
-        </div>
-        <div class="form-group">
-            <label for="Mileage">Mileage (km)</label>
-            <input type="number" class="form-control" asp-for="Mileage" required/>
-        </div>
-        <div class="form-group">
-            <label for="HeartRate">Heart Rate (bpm)</label>
-            <input type="number" class="form-control" asp-for="HeartRate" required/>
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Log Run</button>
+    @{
+        ViewBag.Title = "Log a New Run";
     }
     
+    <h2>Log a New Run</h2>
+    
+    @using (Html.BeginForm("LogRun", "Run", "Post"))
+    {   
+        <input asp-for="Id" type="hidden" value="" />
+        
+        <label asp-for="Date" class="control-label">Date (MM/DD/YYYY)</label>
+        <input type="text" id="Date" name="Date" class="form-control" placeholder="mm/dd/yyyy" required/>
+        
+        <label asp-for="ElevationGain" class="control-label">Elevation Gain (feet)</label>
+        <input type="number" id="ElevationGain" name="ElevationGain" class="form-control" placeholder="(Ex: 800, 2500, etc.)" value="ElevationGain" required/>
+        
+        <label asp-for="Location" class="control-label">Location</label>
+        <input type="text" id="Location" name="Location" class="form-control" placeholder="Enter a location" required/>
+        
+        <label asp-for="Distance" class="control-label">Distance (miles)</label>
+        <input type="number" id="Distance" name="Distance" class="form-control" placeholder="(# of miles)" value="Distance" required/>
+        
+        <label asp-for="HeartRate" class="control-label">Heart Rate (bpm)</label>
+        <input type="number" id="HeartRate" name="HeartRate" class="form-control" placeholder="Enter avg heart rate" value="HeartRate" required/>
+        
+        <label asp-for="RunType" class="control-label">Run Type (Easy, Long, Interval, Tempo, Hill, etc..)</label>
+        <input type="text" id="RunType" name="RunType" class="form-control" placeholder="Enter a type of run" required/>
+
+        <input type="submit" value="Log Run" class="btn btn-primary logbtn" />
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    
+
 </div>

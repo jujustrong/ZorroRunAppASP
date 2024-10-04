@@ -48,3 +48,4 @@
 /Users/jarmstrong/Desktop/repos/ZorroASP/obj/Debug/net8.0/ZorroASP.pdb
 /Users/jarmstrong/Desktop/repos/ZorroASP/obj/Debug/net8.0/ZorroASP.genruntimeconfig.cache
 /Users/jarmstrong/Desktop/repos/ZorroASP/obj/Debug/net8.0/ref/ZorroASP.dll
+/Users/jarmstrong/Desktop/repos/ZorroASP/obj/Debug/net8.0/ZorroASP.sourcelink.json

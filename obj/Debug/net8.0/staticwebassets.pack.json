@@ -13,6 +13,66 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/fonts/atom-font/MBF ATOM V5.otf",
+      "PackagePath": "staticwebassets/fonts/atom-font/MBF ATOM V5.otf"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/fonts/atom-font/MBF ATOM V5.ttf",
+      "PackagePath": "staticwebassets/fonts/atom-font/MBF ATOM V5.ttf"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/fonts/frosty-font/Frosty-Regular.eot",
+      "PackagePath": "staticwebassets/fonts/frosty-font/Frosty-Regular.eot"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/fonts/frosty-font/Frosty-Regular.svg",
+      "PackagePath": "staticwebassets/fonts/frosty-font/Frosty-Regular.svg"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/fonts/frosty-font/Frosty-Regular.ttf",
+      "PackagePath": "staticwebassets/fonts/frosty-font/Frosty-Regular.ttf"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/fonts/frosty-font/Frosty-Regular.woff",
+      "PackagePath": "staticwebassets/fonts/frosty-font/Frosty-Regular.woff"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/fonts/frosty-font/Frosty-Regular.woff2",
+      "PackagePath": "staticwebassets/fonts/frosty-font/Frosty-Regular.woff2"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/IMG_0914.jpg",
+      "PackagePath": "staticwebassets/imgs/IMG_0914.jpg"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/RNI-Films-IMG-348A01ED-A5C2-4DA1-9385-94752543D97A.JPG",
+      "PackagePath": "staticwebassets/imgs/RNI-Films-IMG-348A01ED-A5C2-4DA1-9385-94752543D97A.JPG"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/foxnavbar.png",
+      "PackagePath": "staticwebassets/imgs/foxnavbar.png"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/foxnobg.png",
+      "PackagePath": "staticwebassets/imgs/foxnobg.png"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/mistymountain.jpg",
+      "PackagePath": "staticwebassets/imgs/mistymountain.jpg"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/newestfox.png",
+      "PackagePath": "staticwebassets/imgs/newestfox.png"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/zorroFox.jpeg",
+      "PackagePath": "staticwebassets/imgs/zorroFox.jpeg"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/zorronew.png",
+      "PackagePath": "staticwebassets/imgs/zorronew.png"
+    },
+    {
       "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

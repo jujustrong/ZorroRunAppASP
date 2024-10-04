@@ -1,34 +1,35 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices.JavaScript;
+using System.Runtime.Serialization;
 
 namespace ZorroASP.Models;
 
 public class Run
 {
     [Required]
-    public int ID { get; set; }
-
-    [Required]
+    public int Id { get; set; }
     
-    public int TypeID { get; set; }
-
     [Required]
-    public double Elevation { get; set; }
-
+    public string RunType { get; set; }
+    
     [Required]
-    [StringLength(100)]
+    [Range(0, 1000, ErrorMessage = "Please enter a valid distance.")]
+    public int ElevationGain { get; set; }
+    
+    [Required]
+    [StringLength(255)]
     public string Location { get; set; }
-
-    [Required]
-    public double Mileage { get; set; }
-
-    [Required]
-    public int HeartRate { get; set; }
-
-    [Required]
-    public DateTime Date { get; set; }
-
-    [Required]
-    public int UserID { get; set; }
     
-    public IEnumerable<RunType> RunTypes { get; set; }
+    [Required]
+    [Range(0, 50000, ErrorMessage = "Please enter valid elevation data.")]
+    public double Distance { get; set; }
+    
+    [Required]
+    [Range(30, 220, ErrorMessage = "Please enter valid heart rate data.")]
+    public int HeartRate { get; set; }
+    
+    [Required]
+    [DataType(DataType.Date)]
+    public DateTime Date { get; set; }
+    
 }

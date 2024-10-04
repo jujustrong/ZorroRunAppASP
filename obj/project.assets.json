@@ -153,6 +153,9 @@
           }
         }
       },
+      "MySql.Data.NET40/1.0.0": {
+        "type": "package"
+      },
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
@@ -676,6 +679,18 @@
         "runtimes/win-x64/native/k5sprt64.dll",
         "runtimes/win-x64/native/krb5_64.dll",
         "runtimes/win-x64/native/krbcc64.dll"
+      ]
+    },
+    "MySql.Data.NET40/1.0.0": {
+      "sha512": "pE6qHuJ7ka/UarGLYZbIDwsyBoVE2UraK4H9tJQ4he18iQm5mizd0knsVxWdKw0yqACU3mQwf16Q9316tcZ92w==",
+      "type": "package",
+      "path": "mysql.data.net40/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MySql.Data.dll",
+        "mysql.data.net40.1.0.0.nupkg.sha512",
+        "mysql.data.net40.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -1638,7 +1653,8 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Dapper >= 2.1.35",
-      "MySql.Data >= 9.0.0"
+      "MySql.Data >= 9.0.0",
+      "MySql.Data.NET40 >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1685,6 +1701,10 @@
           "MySql.Data": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "MySql.Data.NET40": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

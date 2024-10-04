@@ -2,7 +2,6 @@ using System;
 using ZorroASP.Models;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Crypto.Generators;
 
 namespace ZorroASP.Controllers;
 
@@ -24,7 +23,6 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            // Hash password, save user to database.
             var command = new MySqlCommand("INSERT INTO Users (Username, Email) VALUES (@Username, @Email)", _connection);
             command.Parameters.AddWithValue("@Username", model.Username);
             command.Parameters.AddWithValue("@Email", model.Email);

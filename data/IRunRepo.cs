@@ -6,13 +6,11 @@ namespace ZorroASP.data;
 
 public interface IRunRepo
 {
-    public IEnumerable<Run> GetRuns();
-    Run GetRun(int id);
+    public IEnumerable<Run> GetAllRuns();
+    Run GetRun(int Id);
     void UpdateRun(Run run);
-    public void LogRun(Run runToLog);
-    public IEnumerable<RunType> GetRunTypes();
-    public Run AssignRunType();
-    public void DeleteRun(Run run);
+    public void LogRun(Run run);
+    public void DeleteRun(int Id);
 
 
 

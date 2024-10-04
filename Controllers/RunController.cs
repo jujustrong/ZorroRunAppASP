@@ -1,4 +1,8 @@
+using System.Data;
 using Microsoft.AspNetCore.Mvc;
+using System.Web;
+using Dapper;
+using MySql.Data.MySqlClient;
 using ZorroASP.Models;
 using ZorroASP.data;
 
@@ -15,45 +19,52 @@ public class RunController : Controller
 
     public IActionResult Index()
     {
-        var runs = _repo.GetRuns();
+        var runs = _repo.GetAllRuns();
         return View(runs);
     }
 
     public IActionResult ViewRun(int id)
     {
         var run = _repo.GetRun(id);
+        if (run == null)
+        {
+            return View("Error");
+        }
         return View(run);
     }
-
-    public IActionResult UpdateRun(int id)
-    {
-        Run runToUpdate = _repo.GetRun(id);
-        if (runToUpdate == null) { return View("RunNotFound"); }
-
-        return View(runToUpdate);
-    }
-
-    public IActionResult UpdateRunToDatabase(Run run)
-    {
-        _repo.UpdateRun(run);
-        return RedirectToAction("ViewRun", new { id = run.ID });
-    }
-
+    
     public IActionResult LogRun()
     {
-        var loggedRun = _repo.AssignRunType();
-        return View(loggedRun);
+        return View();
     }
-
-    public IActionResult LogRunToDatabase(Run runToLog)
+    
+    [HttpPost]
+    public IActionResult LogRun(Run run)
     {
-        _repo.LogRun(runToLog);
+        _repo.LogRun(run);
         return RedirectToAction("Index");
     }
-
-    public IActionResult DeleteRun(Run run)
+    
+    public IActionResult UpdateRun(int id)
     {
-        _repo.DeleteRun(run);
+        Run run = _repo.GetRun(id);
+        if (run == null)
+        {
+            return View("RunNotFound");
+        }
+        return View(run);
+    }
+    
+    [HttpPost]
+    public IActionResult UpdateRun(Run run)
+    {
+        _repo.UpdateRun(run);
+        return RedirectToAction("ViewRun", new { id = run.Id});
+    }
+
+    public IActionResult DeleteRun(int id)
+    {
+        _repo.DeleteRun(id);
         return RedirectToAction("Index");
     }
 

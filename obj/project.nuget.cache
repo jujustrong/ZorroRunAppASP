@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KoMQZS1n8j+1EhIeZGApft3ZARAH3+n1chY0dG9gFOe7gQrq2gOnfZoy0OJcM4smz8uCyMiQckg23x2NmuQJMA==",
+  "dgSpecHash": "wClOJ6nx6JE71CohQQ6/cm7PW3iF8BUGMJWEmhPjtF6kF5YlEkDKAdmlK4NG4IkEWF5SoSK2uxouYodkdy69dg==",
   "success": true,
   "projectFilePath": "/Users/jarmstrong/Desktop/repos/ZorroASP/ZorroASP.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "/Users/jarmstrong/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/jarmstrong/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/jarmstrong/.nuget/packages/mysql.data/9.0.0/mysql.data.9.0.0.nupkg.sha512",
+    "/Users/jarmstrong/.nuget/packages/mysql.data.net40/1.0.0/mysql.data.net40.1.0.0.nupkg.sha512",
     "/Users/jarmstrong/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/jarmstrong/.nuget/packages/system.configuration.configurationmanager/8.0.0/system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "/Users/jarmstrong/.nuget/packages/system.diagnostics.diagnosticsource/8.0.1/system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512",
