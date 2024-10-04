@@ -41,12 +41,20 @@
       "PackagePath": "staticwebassets/fonts/frosty-font/Frosty-Regular.woff2"
     },
     {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/IMG_0914-2.jpg",
+      "PackagePath": "staticwebassets/imgs/IMG_0914-2.jpg"
+    },
+    {
       "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/IMG_0914.jpg",
       "PackagePath": "staticwebassets/imgs/IMG_0914.jpg"
     },
     {
       "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/RNI-Films-IMG-348A01ED-A5C2-4DA1-9385-94752543D97A.JPG",
       "PackagePath": "staticwebassets/imgs/RNI-Films-IMG-348A01ED-A5C2-4DA1-9385-94752543D97A.JPG"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/Untitled design.png",
+      "PackagePath": "staticwebassets/imgs/Untitled design.png"
     },
     {
       "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/foxnavbar.png",
@@ -57,12 +65,20 @@
       "PackagePath": "staticwebassets/imgs/foxnobg.png"
     },
     {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/iStock-694641356.jpg",
+      "PackagePath": "staticwebassets/imgs/iStock-694641356.jpg"
+    },
+    {
       "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/mistymountain.jpg",
       "PackagePath": "staticwebassets/imgs/mistymountain.jpg"
     },
     {
       "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/newestfox.png",
       "PackagePath": "staticwebassets/imgs/newestfox.png"
+    },
+    {
+      "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/runnerstock.jpg",
+      "PackagePath": "staticwebassets/imgs/runnerstock.jpg"
     },
     {
       "Id": "/Users/jarmstrong/Desktop/repos/ZorroASP/wwwroot/imgs/zorroFox.jpeg",

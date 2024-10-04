@@ -1,7 +1,70 @@
-﻿@{
+﻿@using ZorroASP.Controllers
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4"><img class="homepagepic" src="imgs/newestfox.png" alt="zorro running logo"/></h1>
+<div class="mycontainer">
+
+    <div class="slides">
+        <div class="text-center">
+            <h1 class="display-4"><img class="homepagepic" src="imgs/newestfox.png" alt="zorro running logo"/></h1>
+        </div>
+    </div>
+
+    <div class="slides">
+        <div class="container">
+            <header class="hero-section text-center">
+                <h1>Welcome to Zorro</h1>
+                <p>Track your trail runs, log your achievements, and elevate your running journey with a dedicated platform for trail runners.</p>
+                <a href="/Run/LogRun.cshtml" class="btn btn-primary btn-lg">Log Your Run</a>
+            </header>
+        </div>
+    </div>
+
+    <div class="slides">
+        <div class="container my-5" id="features-section">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2>What Zorro Can Do For You</h2>
+                    <p>Explore the key features of our platform that will enhance your trail running experience.</p>
+                </div>
+            </div>
+        
+            <div class="row">
+            
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="/imgs/IMG_0914-2.jpg" class="card-img" alt="Track Runs">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <h5 class="card-title text-white">Track Your Runs</h5>
+                            <p class="card-text text-white">Log every trail run with accurate data about mileage, elevation, and more.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="/imgs/RNI-Films-IMG-348A01ED-A5C2-4DA1-9385-94752543D97A.JPG" class="card-img" alt="Analyze Performance">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <h5 class="card-title text-white">Analyze Performance</h5>
+                            <p class="card-text text-white">Dive deep into your stats and improve your trail running over time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="/imgs/runnerstock.jpg" class="card-img" alt="Find New Trails">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <h5 class="card-title text-white">Find New Trails</h5>
+                            <p class="card-text text-white">Explore popular trails in your area and add them to your running list.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+    </div>
 </div>

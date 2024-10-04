@@ -4,14 +4,8 @@
     ViewBag.Title = "My Trail Runs";
 }
 
-<h2>Trail Runs</h2>
-
-<div style="display: block">
-    <a href="/Run/LogRun/" class="btn btn-primary">Log Run</a>
-</div>
-
 <div class="container mt-4">
-    <h2>Your Past Runs</h2>
+    <h2>Your Past Trail Runs</h2>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -29,7 +23,7 @@
             @foreach (var run in Model)
             {
                 <tr>
-                <td><a href=/Run/ViewRun/@run.Id>@run.Id</a></td>
+                <td><a class="id" href=/Run/ViewRun/@run.Id>@run.Id</a></td>
                     <td>@run.Date.ToShortDateString()</td>
                     <td>@run.Distance mi</td>
                     <td>@run.ElevationGain ft</td>
