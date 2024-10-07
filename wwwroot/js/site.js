@@ -34,3 +34,12 @@ $(document).ready(function(){
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 });
+
+window.onscroll = function() {scrollProgress()};
+
+function scrollProgress() {
+    let scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+    let pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollPercentage = (scrollPosition / pageHeight) * 100;
+    document.getElementById("scrollIndicator").style.width = scrollPercentage + "%";
+}

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZorroASP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ad77da83a4f594990c0eddaa982801f906b4c12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38bacf1dca874c2bfbc2d1e4c3d26da7553ebf67")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZorroASP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZorroASP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
