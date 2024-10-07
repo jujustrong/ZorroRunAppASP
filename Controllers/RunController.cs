@@ -41,8 +41,14 @@ public class RunController : Controller
     [HttpPost]
     public IActionResult LogRun(Run run)
     {
-        _repo.LogRun(run);
-        return RedirectToAction("Index");
+        if (ModelState.IsValid)
+        {
+            _repo.LogRun(run); 
+            return RedirectToAction("Index");
+        }
+
+        return View(run);
+
     }
     
     public IActionResult UpdateRun(int id)
@@ -58,8 +64,13 @@ public class RunController : Controller
     [HttpPost]
     public IActionResult UpdateRun(Run run)
     {
-        _repo.UpdateRun(run);
-        return RedirectToAction("ViewRun", new { id = run.Id});
+        if (ModelState.IsValid)
+        { 
+            _repo.UpdateRun(run);
+            return RedirectToAction("ViewRun", new { id = run.Id});
+        }
+
+        return View(run);
     }
 
     public IActionResult DeleteRun(int id)

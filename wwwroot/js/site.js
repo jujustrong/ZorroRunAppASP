@@ -20,17 +20,6 @@ document.querySelectorAll('.delete-run').forEach(button => {
     });
 });
 
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-});
-
-$('.btn-primary').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top
-    }, 800);
-});
-
 $(window).scroll(function() {
     if ($(this).scrollTop() > 50) {
         $('.navbar').addClass('navbar-scrolled');

@@ -6,14 +6,14 @@ namespace ZorroASP.Models;
 
 public class Run
 {
-    [Required]
+    [Required(ErrorMessage = "Null")]
     public int Id { get; set; }
     
-    [Required]
+    [Required(ErrorMessage = "Please enter a run type")]
     public string RunType { get; set; }
     
     [Required]
-    [Range(0, 1000, ErrorMessage = "Please enter a valid distance.")]
+    [Range(0, 50000, ErrorMessage = "Elevation gain must between 0 and 50000 feet")]
     public int ElevationGain { get; set; }
     
     [Required]
@@ -21,15 +21,15 @@ public class Run
     public string Location { get; set; }
     
     [Required]
-    [Range(0, 50000, ErrorMessage = "Please enter valid elevation data.")]
+    [Range(0, 1000, ErrorMessage = "Distance must be between 0 and 1000 miles")]
     public double Distance { get; set; }
     
     [Required]
-    [Range(30, 220, ErrorMessage = "Please enter valid heart rate data.")]
+    [Range(30, 220, ErrorMessage = "Please enter valid heart rate data between 30 and 220.")]
     public int HeartRate { get; set; }
     
-    [Required]
     [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",  ApplyFormatInEditMode = true)]
     public DateTime Date { get; set; }
     
 }

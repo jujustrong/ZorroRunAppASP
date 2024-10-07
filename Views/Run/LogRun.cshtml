@@ -11,30 +11,30 @@
     {   
         <input asp-for="Id" type="hidden" value="" />
         
-        <label asp-for="Date" class="control-label">Date (MM/DD/YYYY)</label>
-        <input type="text" id="Date" name="Date" class="form-control" placeholder="mm/dd/yyyy" required/>
+        <label asp-for="Date" class="control-label">Date</label> <span asp-validation-for="Date" class="text-danger"></span>
+        <input type="date" name="Date" class="form-control" placeholder="yyyy/MM/dd" required/>
         
-        <label asp-for="ElevationGain" class="control-label">Elevation Gain (feet)</label>
-        <input type="number" id="ElevationGain" name="ElevationGain" class="form-control" placeholder="(Ex: 800, 2500, etc.)" value="ElevationGain" required/>
+        <label asp-for="ElevationGain" class="control-label">Elevation Gain (feet)</label> <span asp-validation-for="ElevationGain" class="text-danger"></span>
+        <input type="number" name="ElevationGain" class="form-control" placeholder="(Ex: 800, 2500, etc.)" required/>
         
-        <label asp-for="Location" class="control-label">Location</label>
-        <input type="text" id="Location" name="Location" class="form-control" placeholder="Enter a location" required/>
+        <label asp-for="Location" class="control-label">Location</label> <span asp-validation-for="Location" class="text-danger"></span>
+        <input type="text" name="Location" class="form-control" placeholder="Enter a location" required/>
         
-        <label asp-for="Distance" class="control-label">Distance (miles)</label>
-        <input type="number" id="Distance" name="Distance" class="form-control" placeholder="(# of miles)" value="Distance" required/>
+        <label asp-for="Distance" class="control-label">Distance (miles)</label> <span asp-validation-for="Distance" class="text-danger"></span>
+        <input type="number" name="Distance" class="form-control" placeholder="(# of miles)" required/>
         
-        <label asp-for="HeartRate" class="control-label">Heart Rate (bpm)</label>
-        <input type="number" id="HeartRate" name="HeartRate" class="form-control" placeholder="Enter avg heart rate" value="HeartRate" required/>
+        <label asp-for="HeartRate" class="control-label">Heart Rate (bpm)</label> <span asp-validation-for="HeartRate" class="text-danger"></span>
+        <input type="number" name="HeartRate" class="form-control" placeholder="Enter avg heart rate" required/>
         
-        <label asp-for="RunType" class="control-label">Run Type (Easy, Long, Interval, Tempo, Hill, etc..)</label>
-        <input type="text" id="RunType" name="RunType" class="form-control" placeholder="Enter a type of run" required/>
-
-        <input type="submit" value="Log Run" class="btn btn-primary logbtn" />
+        <label asp-for="RunType" class="control-label">Run Type (Easy, Long, Interval, Tempo, Hill, etc..)</label> <span asp-validation-for="RunType" class="text-danger"></span>
+        <input type="text" name="RunType" class="form-control" placeholder="Enter a type of run" required/>
+        
+        <input type="submit" value="LogRun" class="btn btn-primary logbtn" />
     }
     
     <div>
         @Html.ActionLink("Back to List", "Index", null, null, new { @class = "btn btn-secondary cnclbtn" })
     </div>
     
-
 </div>
+
