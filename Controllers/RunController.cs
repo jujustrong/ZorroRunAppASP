@@ -41,14 +41,8 @@ public class RunController : Controller
     [HttpPost]
     public IActionResult LogRun(Run run)
     {
-        if (ModelState.IsValid)
-        {
-            _repo.LogRun(run); 
-            return RedirectToAction("Index");
-        }
-
-        return View(run);
-
+        _repo.LogRun(run); 
+        return RedirectToAction("Index");
     }
     
     public IActionResult UpdateRun(int id)
