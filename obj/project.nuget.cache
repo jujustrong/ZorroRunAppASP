@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "wClOJ6nx6JE71CohQQ6/cm7PW3iF8BUGMJWEmhPjtF6kF5YlEkDKAdmlK4NG4IkEWF5SoSK2uxouYodkdy69dg==",
+  "dgSpecHash": "l9+pbQMVp/ExpwpvsDYESHg0tu0pHVhl5EtNCmEiKjDDQltOlY4P1LX+UGNK9yN/kwwbkWZAYvtiOlPzOuiX3Q==",
   "success": true,
   "projectFilePath": "/Users/jarmstrong/Desktop/repos/ZorroASP/ZorroASP.csproj",
   "expectedPackageFiles": [
     "/Users/jarmstrong/.nuget/packages/bouncycastle.cryptography/2.3.1/bouncycastle.cryptography.2.3.1.nupkg.sha512",
+    "/Users/jarmstrong/.nuget/packages/chart.js/3.7.1/chart.js.3.7.1.nupkg.sha512",
     "/Users/jarmstrong/.nuget/packages/dapper/2.1.35/dapper.2.1.35.nupkg.sha512",
     "/Users/jarmstrong/.nuget/packages/google.protobuf/3.26.1/google.protobuf.3.26.1.nupkg.sha512",
     "/Users/jarmstrong/.nuget/packages/k4os.compression.lz4/1.3.8/k4os.compression.lz4.1.3.8.nupkg.sha512",
