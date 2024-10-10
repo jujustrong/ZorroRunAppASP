@@ -18,7 +18,7 @@
         <input type="number" name="ElevationGain" class="form-control" placeholder="(Ex: 800, 2500, etc.)" value="ElevationGain" required/>
         
         <label asp-for="Location" class="control-label">Location</label> <span asp-validation-for="Location" class="text-danger"></span>
-        <input type="text" name="Location" class="form-control" placeholder="Enter a location" value="Location" required/>
+        <input type="text" name="Location" class="form-control" placeholder="Enter a location" required/>
         
         <label asp-for="Distance" class="control-label">Distance (miles)</label> <span asp-validation-for="Distance" class="text-danger"></span>
         <input type="number" name="Distance" class="form-control" placeholder="(# of miles)" value="Distance" required/>
@@ -27,7 +27,7 @@
         <input type="number" name="HeartRate" class="form-control" placeholder="Enter avg heart rate" value="HeartRate" required/>
         
         <label asp-for="RunType" class="control-label">Run Type (Easy, Long, Interval, Tempo, Hill, etc..)</label> <span asp-validation-for="RunType" class="text-danger"></span>
-        <input type="text" name="RunType" class="form-control" placeholder="Enter a type of run" value="RunType" required/>
+        <input type="text" name="RunType" class="form-control" placeholder="Enter a type of run" required/>
         
         <input type="submit" value="LogRun" class="btn btn-primary logbtn" />
     }

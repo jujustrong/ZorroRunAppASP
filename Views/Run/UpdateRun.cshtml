@@ -11,7 +11,7 @@
     {
         <input asp-for="Id" type="hidden" value="@Model.Id" />
         
-        <label asp-for="Date" class="control-label">Change Date:</label>
+        <label asp-for="Date" class="control-label">Change Date:</label> <span asp-validation-for="Date" class="text-danger"></span>
         <input type="date" name="Date" class="form-control" value="@Model.Date" />
         
         <label asp-for="ElevationGain" class="control-label">Adjust Elevation:</label>    

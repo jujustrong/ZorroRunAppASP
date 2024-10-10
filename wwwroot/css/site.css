@@ -70,13 +70,12 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
-  /*background-color: #f7f7f7*/
 }
 
 .container {
   margin: 50px auto;
   max-width: 900px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -165,7 +164,7 @@ form .form-control {
 #features-section {
   margin-top: 100px;
   padding: 50px 30px 0 30px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #features-section h2 {
@@ -239,6 +238,7 @@ form .form-control {
   max-width: 100%;
   height: auto;
   margin-top: -200px;
+  margin-bottom: -100px;
 }
 
 .hero-section {
@@ -262,17 +262,24 @@ form .form-control {
 .hero-section .btn-primary {
   padding: 15px 30px;
   font-size: 18px;
-  border-radius: 30px;
+  border-radius: 5px;
   background-color: #fc4c02;
   border-color: #fc4c02;
+  width: 70%;
+}
+
+#herobtn {
+  margin-top: 0;
+  background-color: rgb(252, 76, 2);
+  width: 70%;
 }
 
 .footer {
   background-color: #333;
   color: #fff;
   padding: 5px 0;
-  position: fixed;
-  height: auto;
+  position: absolute;
+  height: 80px;
   width: 100%;
   bottom: 0;
 }
@@ -282,8 +289,7 @@ form .form-control {
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  margin-bottom: 0;
-  
+  margin: -20px 0 0 0;
 }
 
 .footer a:hover {
@@ -358,4 +364,6 @@ form .form-control {
   }
   
 }
+
+/*max width 600px mobile view*/
 

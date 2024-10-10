@@ -58,11 +58,8 @@ public class RunController : Controller
     [HttpPost]
     public IActionResult UpdateRun(Run run)
     {
-        if (ModelState.IsValid)
-        { 
-            _repo.UpdateRun(run);
-            return RedirectToAction("ViewRun", new { id = run.Id});
-        }
+        _repo.UpdateRun(run);
+        return RedirectToAction("ViewRun", new { id = run.Id});
 
         return View(run);
     }

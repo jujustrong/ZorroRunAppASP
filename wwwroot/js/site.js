@@ -43,3 +43,12 @@ function scrollProgress() {
     let scrollPercentage = (scrollPosition / pageHeight) * 100;
     document.getElementById("scrollIndicator").style.width = scrollPercentage + "%";
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
