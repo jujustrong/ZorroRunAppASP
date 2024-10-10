@@ -19,16 +19,25 @@ html, body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   margin-top: -80px;
+  gap: 150px;
 }
 
 .slides {
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
-  scroll-snap-align: start;
+  gap: 150px;
+  scroll-snap-align: center;
+}
+
+#slide1 {
+  margin-top: -100px;
+}
+
+#slide2 {
+  margin-top: 20px;
 }
 
 .navbar {
@@ -179,7 +188,7 @@ form .form-control {
 }
 
 #features-section {
-  margin-top: 100px;
+  margin-top: 130px;
   padding: 50px 30px 0 30px;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -263,7 +272,7 @@ form .form-control {
   max-width: 100%;
   height: auto;
   margin-top: -200px;
-  margin-bottom: -100px;
+  margin-bottom: -150px;
 }
 
 .hero-section {
@@ -294,9 +303,16 @@ form .form-control {
 }
 
 #herobtn {
-  margin-top: -40px;
+  margin-top: -80px;
   background-color: rgb(252, 76, 2);
   width: 70%;
+}
+
+#herobtn2{
+  margin-top: -70px;
+  margin-bottom: 30px;
+  background-color: rgb(252, 76, 2);
+  width: 100%;
 }
 
 .notes-section {
@@ -443,7 +459,7 @@ form .form-control {
 @media (min-width: 400px) {
   .mycontainer {
     min-height: 100vh;
-    gap: 100px;
+    gap: 150px;
     height: 100%;
   }
   

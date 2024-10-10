@@ -49,3 +49,8 @@
 /Users/jarmstrong/Desktop/repos/ZorroASP/obj/Debug/net8.0/ZorroASP.genruntimeconfig.cache
 /Users/jarmstrong/Desktop/repos/ZorroASP/obj/Debug/net8.0/ref/ZorroASP.dll
 /Users/jarmstrong/Desktop/repos/ZorroASP/obj/Debug/net8.0/ZorroASP.sourcelink.json
+/Users/jarmstrong/Desktop/repos/ZorroASP/bin/Debug/net8.0/ZorroASP.staticwebassets.endpoints.json
+/Users/jarmstrong/Desktop/repos/ZorroASP/bin/Debug/net8.0/Castle.Core.dll
+/Users/jarmstrong/Desktop/repos/ZorroASP/bin/Debug/net8.0/Moq.dll
+/Users/jarmstrong/Desktop/repos/ZorroASP/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/jarmstrong/Desktop/repos/ZorroASP/obj/Debug/net8.0/staticwebassets/msbuild.ZorroASP.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
