@@ -70,20 +70,11 @@ public class RunController : Controller
         return RedirectToAction("Index");
     }
 
-    public IActionResult Details(int id)
+    [HttpPost]
+    public IActionResult SaveNotes(int runId, string notes)
     {
-        var runDetails = _repo.GetRunDetailsByRunId(id);
-        var run = _repo.GetRun(id);
-        var analyticsData = new
-        {
-            Labels = runDetails.Select(d => $"Mile {d.Mile}").ToArray(),
-            Paces = runDetails.Select(d => d.Pace).ToArray(),
-            HeartRate = runDetails.Select(d => d.HeartRate).ToArray(),
-        };
-
-        ViewBag.AnalyticsData = analyticsData;
-        return View(run);
+        _repo.UpdateRunNotes(runId, notes);
+        return RedirectToAction("ViewRun", new { Id = runId });
     }
-
-
+    
 }

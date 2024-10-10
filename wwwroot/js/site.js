@@ -40,7 +40,7 @@ window.onscroll = function() {scrollProgress()};
 function scrollProgress() {
     let scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
     let pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrollPercentage = (scrollPosition / pageHeight) * 100;
+    let scrollPercentage = (scrollPosition / pageHeight) * 50;
     document.getElementById("scrollIndicator").style.width = scrollPercentage + "%";
 }
 
@@ -51,4 +51,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: "smooth"
         });
     });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    let notesTextarea = document.getElementById('notes');
+    let autosaveMessage = document.getElementById('autosave-message');
+    let saveButton = document.getElementById('save-notes-btn');
+    
+    notesTextarea.addEventListener('input', function () {
+        autosaveMessage.style.display = 'block';
+        autosaveMessage.textContent = 'Typing...';
+        autosaveMessage.classList.add('text-warning');
+    });
+    
+    saveButton.addEventListener('click', function () {
+        autosaveMessage.textContent = 'Saving...';
+        autosaveMessage.classList.remove('text-warning');
+        autosaveMessage.classList.add('text-success');
+    });
+    
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+    let formData = new FormData(this);
+    
+    fetch(this.action, {
+        method: 'POST',
+        body: formData
+    }).then(function(response) {
+        return response.json();  // Or handle accordingly
+    }).then(function(data) {
+        autosaveMessage.textContent = 'Notes saved successfully!';
+    }).catch(function(error) {
+        autosaveMessage.textContent = 'Failed to save notes.';
+    });
+});
+
 });

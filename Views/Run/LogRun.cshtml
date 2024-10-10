@@ -1,6 +1,6 @@
 @model ZorroASP.Models.Run
 
-<div class="container">
+<div class="container col-md-6">
     @{
         ViewBag.Title = "Log a New Run";
     }
@@ -15,13 +15,16 @@
         <input type="date" name="Date" class="form-control" placeholder="yyyy/MM/dd" value="Date" required/>
         
         <label asp-for="ElevationGain" class="control-label">Elevation Gain (feet)</label> <span asp-validation-for="ElevationGain" class="text-danger"></span>
-        <input type="number" name="ElevationGain" class="form-control" placeholder="(Ex: 800, 2500, etc.)" value="ElevationGain" required/>
+        <input type="number" step="0.01" name="ElevationGain" class="form-control" placeholder="(Ex: 800, 2500, etc.)" value="ElevationGain" required/>
         
         <label asp-for="Location" class="control-label">Location</label> <span asp-validation-for="Location" class="text-danger"></span>
         <input type="text" name="Location" class="form-control" placeholder="Enter a location" required/>
         
         <label asp-for="Distance" class="control-label">Distance (miles)</label> <span asp-validation-for="Distance" class="text-danger"></span>
         <input type="number" name="Distance" class="form-control" placeholder="(# of miles)" value="Distance" required/>
+        
+        <label asp-for="AvgPace" class="control-label">Average Pace (min/mile)</label> <span asp-validation-for="AvgPace" class="text-danger"></span>
+        <input type="number" step="0.01" name="AvgPace" class="form-control" placeholder="Enter your Avg min/mile" value="AvgPace" required/>
         
         <label asp-for="AvgHeartRate" class="control-label">Average Heart Rate (bpm)</label> <span asp-validation-for="AvgHeartRate" class="text-danger"></span>
         <input type="number" name="AvgHeartRate" class="form-control" placeholder="Enter avg heart rate" value="AvgHeartRate" required/>

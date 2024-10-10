@@ -15,13 +15,16 @@
         <input type="date" name="Date" class="form-control" value="@Model.Date" />
         
         <label asp-for="ElevationGain" class="control-label">Adjust Elevation:</label>    
-        <input type="number" step="1" name="ElevationGain" class="form-control" value="@Model.ElevationGain" />
+        <input type="number" step="0.01" name="ElevationGain" class="form-control" value="@Model.ElevationGain" />
         
         <label asp-for="Location" class="control-label">Change Location:</label>
         <input type="text" name="Location" class="form-control" value="@Model.Location" />
         
         <label asp-for="Distance" class="control-label">Adjust Distance:</label>    
         <input type="number" step="0.01" name="Distance" class="form-control" value="@Model.Distance" />
+        
+        <label asp-for="AvgPace" class="control-label">Adjust Avg Pace:</label>    
+        <input type="number" step="0.01" name="AvgPace" class="form-control" value="@Model.AvgPace" />
         
         <label asp-for="AvgHeartRate" class="control-label">Adjust Avg Heart Rate:</label>    
         <input type="number" step="1" name="HeartRate" class="form-control" value="@Model.AvgHeartRate" />

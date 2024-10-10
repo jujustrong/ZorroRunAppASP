@@ -14,8 +14,8 @@ builder.Services.AddScoped<MySqlConnection>((s) =>
     return conn;
 });
 
-
 builder.Services.AddTransient<IRunRepo, RunRepo>();
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 

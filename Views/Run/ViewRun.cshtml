@@ -5,8 +5,7 @@
 }
 
 
-
-<div class="container">
+<div class="container col-md-5">
     
     <div class="run-details">
         <h3>Details for @Model.RunType Run on @Model.Date.DayOfWeek @Model.Date.ToShortDateString()</h3>
@@ -19,6 +18,9 @@
         </div>
         <div class="detail">
             <span>Elevation Gain: </span> @Model.ElevationGain feet
+        </div>
+        <div class="detail">
+            <span>Avg Pace: </span> @Model.AvgPace min/mile
         </div>
         <div class="detail">
             <span>Avg Heart Rate: </span> @Model.AvgHeartRate bpm
@@ -37,6 +39,20 @@
             }
         </div>
         
+    </div>
+
+    <div class="notes-section card mt-5 shadow">
+        <div class="card-body">
+            <form asp-action="SaveNotes" method="post" class="mt-3">
+                <input type="hidden" name="runId" value="@Model.Id" />
+                <div class="form-group">
+                    <label for="notes">Add or Edit Notes:</label>
+                    <textarea class="form-control" id="notes" name="notes" rows="5" placeholder="Type your notes here...">@Model.Notes</textarea>
+                </div>
+                <button type="submit" class="btn btn-success mt-2" id="save-notes-btn">Save Notes</button>
+                <small class="text-muted" id="autosave-message"></small>
+            </form>
+        </div>
     </div>
     
 </div>

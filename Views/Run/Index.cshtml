@@ -4,7 +4,7 @@
     ViewBag.Title = "My Trail Runs";
 }
 
-<div class="container mt-4">
+<div id="indextable" class="container col-lg-10 col-sm-12 mt-4">
     <h2>Your Past Trail Runs</h2>
     <table class="table table-striped">
         <thead>
@@ -13,6 +13,7 @@
             <th>Date</th>
             <th>Distance</th>
             <th>Elevation Gain</th>
+            <th>Avg Pace</th>
             <th>Avg Heart Rate</th>
             <th>Run Type</th>
             <th>Location</th>
@@ -27,12 +28,13 @@
                     <td>@run.Date.ToShortDateString()</td>
                     <td>@run.Distance mi</td>
                     <td>@run.ElevationGain ft</td>
+                    <td>@run.AvgPace min/mi</td>
                     <td>@run.AvgHeartRate bpm</td>
                     <td>@run.RunType</td>
                     <td>@run.Location</td>
                     <td>
-                        @Html.ActionLink("Edit", "UpdateRun", new { id = run.Id }, new { @class = "btn btn-secondary btn-sm ms-2", onclick = "return confirm('Are you sure you want to edit this run?');"}) |
-                        @Html.ActionLink("Delete", "DeleteRun", new { id = run.Id }, new { @class = "btn btn-danger btn-sm ms-2", onclick = "return confirm('Are you sure you want to delete this run?');"})
+                        @Html.ActionLink("Edit", "UpdateRun", new { id = run.Id },new { @class = "btn btn-secondary btn-sm btn-block mt-2", onclick = "return confirm('Are you sure you want to edit this run?');"})
+                        @Html.ActionLink("Delete", "DeleteRun", new { id = run.Id },new { @class = "btn btn-danger btn-sm btn-block mt-2", onclick = "return confirm('Are you sure you want to delete this run?');"})
                     </td>
                 </tr>
             }

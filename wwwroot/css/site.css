@@ -8,7 +8,7 @@ html {
 }
 
 html, body {
-  height: 100%;
+  /*height: 100%;*/
   margin: 0;
   padding: 0;
 }
@@ -70,15 +70,20 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .container {
   margin: 50px auto;
+  margin-bottom: 100px;
   max-width: 900px;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
 }
 
 label {
@@ -89,6 +94,12 @@ label {
   color: #555;
 }
 
+form {
+  margin-bottom: 20px;
+  min-width: 300px;
+  max-width: 100%;
+}
+
 form .form-control {
   border: 1px solid #ddd;
   padding: 10px;
@@ -96,6 +107,10 @@ form .form-control {
   font-size: 16px;
   width: 100%;
   margin-bottom: 15px;
+}
+
+#indextable {
+  max-width: 5000px;
 }
 
 ::placeholder {
@@ -123,8 +138,9 @@ form .form-control {
   padding: 9px 20px;
   border-radius: 5px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 6px;
   width: 100%;
+  background-color: #575757;
 }
 
 .viewbtndgr {
@@ -151,10 +167,11 @@ form .form-control {
 
 .logbtn {
   margin: 10px 10px 10px 0;
+  width: 100%;
 }
 
 .btn-sm {
-  margin-right: 5px;
+  margin-right: auto;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -217,7 +234,7 @@ form .form-control {
 
 .run-details {
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -277,19 +294,79 @@ form .form-control {
 }
 
 #herobtn {
-  margin-top: 0;
+  margin-top: -40px;
   background-color: rgb(252, 76, 2);
   width: 70%;
+}
+
+.notes-section {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(150, 150, 150, 0.6);
+}
+
+.notes-section .card-header {
+  padding: 15px;
+  font-size: 1.5rem;
+}
+
+#notes-heading{
+  background-color: rgba(161, 161, 161, 0.36);
+  color: orangered;
+  border: none;
+}
+
+.notes-section .form-control {
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.notes-section .form-control:focus {
+  border-color: rgb(252, 76, 2);
+  box-shadow: 0 0 8px rgb(161, 50, 2);
+}
+
+#save-notes-btn {
+  background-color: rgba(35, 91, 8, 0.87);
+  border-color: #000000;
+}
+
+#save-notes-btn:hover {
+  background-color: rgba(25, 66, 5, 0.87);
+}
+
+#autosave-message {
+  display: none;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.notes-section .form-group label {
+  font-weight: bold;
+  margin: -10px auto 10px auto;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  /*text-shadow: 1px 1px 1px rgba(185, 185, 185, 0.4);*/
+}
+
+.notes-section .card-body {
+  padding: 20px;
+}
+
+.notes-section .form-control {
+  resize: vertical;
+  max-height: 200px;
 }
 
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 5px 0;
-  position: absolute;
+  padding: 20px;
+  position: page;
   height: 80px;
   width: 100%;
   bottom: 0;
+  margin-top: auto;
 }
 
 .footer p, .footer a {
@@ -335,27 +412,17 @@ form .form-control {
   z-index: 99;
 }
 
-::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Track background color */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #888; /* Scrollbar thumb color */
-  border-radius: 10px; /* Rounder edges */
-  border: 3px solid #f1f1f1; /* Space around the thumb */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Darker on hover */
-}
-
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 979px) {
   html {
     font-size: 16px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    margin-bottom: 10px;
   }
 
   .container {
@@ -373,5 +440,16 @@ form .form-control {
   
 }
 
-/*max width 600px mobile view*/
+@media (min-width: 400px) {
+  .mycontainer {
+    min-height: 100vh;
+    gap: 100px;
+    height: 100%;
+  }
+  
+  .footer {
+    margin-top: 50px;
+  }
+}
+
 

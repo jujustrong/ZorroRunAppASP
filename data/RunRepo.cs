@@ -20,26 +20,26 @@ public class RunRepo : IRunRepo
 
     public Run GetRun(int id)
     {
-        return _connection.QuerySingle<Run>("SELECT * FROM Runs WHERE Id = @id", new {id});
+        return _connection.QuerySingle<Run>("SELECT * FROM Runs WHERE Id = @id", new {Id = id});
     }
     
     public void LogRun(Run run)
     {
-        _connection.Execute("INSERT INTO Runs (Date, ElevationGain, Location, Distance, AvgHeartRate, RunType) " +
-                            "VALUES (@date, @elevationGain, @location, @distance, @avgHeartRate, @runType);", new
+        _connection.Execute("INSERT INTO Runs (Date, ElevationGain, Location, Distance, AvgPace, AvgHeartRate, RunType) " +
+                            "VALUES (@date, @elevationGain, @location, @distance, @avgPace, @avgHeartRate, @runType);", new
         {
             date = run.Date, elevationGain = run.ElevationGain, location = run.Location, 
-            distance = run.Distance, avgHeartRate = run.AvgHeartRate, runType = run.RunType
+            distance = run.Distance, avgPace = run.AvgPace, avgHeartRate = run.AvgHeartRate, runType = run.RunType
         });
     }
 
     public void UpdateRun(Run run)
     {
         _connection.Execute("UPDATE Runs SET Date = @date, ElevationGain = @elevationGain, Location = @location, " +
-                            "Distance = @distance, AvgHeartRate = @avgHeartRate, RunType = @runType WHERE Id = @id", new
+                            "Distance = @distance, AvgPace = @avgPace, AvgHeartRate = @avgHeartRate, RunType = @runType WHERE Id = @id", new
         {
             date = run.Date, elevationGain = run.ElevationGain, location = run.Location, distance = run.Distance, 
-            avgHeartRate = run.AvgHeartRate, runType = run.RunType, id = run.Id
+            avgPace = run.AvgPace, avgHeartRate = run.AvgHeartRate, runType = run.RunType, id = run.Id
         });
     }
 
@@ -49,9 +49,11 @@ public class RunRepo : IRunRepo
         // _connection.Execute("DELETE FROM runs WHERE DATE = @date;", new { date = run.Date });
     }
 
-    public IEnumerable<RunDetail> GetRunDetailsByRunId(int runId)
+    public void UpdateRunNotes(int runId, string notes)
     {
-        return _connection.Query<RunDetail>("SELECT Mile, Pace, HeartRate FROM RunDetails WHERE RunId = @RunId",
-            new { RunId = runId }).ToList();
+        _connection.Execute("UPDATE Runs SET Notes = @Notes WHERE Id = @Id", new
+        {
+            Notes = notes, Id = runId
+        });
     }
 }

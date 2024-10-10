@@ -22,7 +22,7 @@ public class Run
     
     [Required]
     [Range(0, 1000, ErrorMessage = "Distance must be between 0 and 1000 miles.")]
-    public double Distance { get; set; }
+    public decimal Distance { get; set; }
     
     [Required]
     [Range(30, 220, ErrorMessage = "Please enter valid heart rate data between 30 and 220.")]
@@ -32,5 +32,11 @@ public class Run
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",  ApplyFormatInEditMode = true)]
     public DateTime Date { get; set; }
+    
+    [Required]
+    [Range(3, 50, ErrorMessage = "Pace must be between 3 and 50 min/mile.")]
+    public decimal AvgPace { get; set; }
+    
+    public string Notes { get; set; }
     
 }
