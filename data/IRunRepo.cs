@@ -11,6 +11,7 @@ public interface IRunRepo
     void UpdateRun(Run run);
     public void LogRun(Run run);
     public void DeleteRun(int Id);
+    IEnumerable<RunDetail> GetRunDetailsByRunId(int runId);
 
 
 

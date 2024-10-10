@@ -26,7 +26,7 @@ public class Run
     
     [Required]
     [Range(30, 220, ErrorMessage = "Please enter valid heart rate data between 30 and 220.")]
-    public int HeartRate { get; set; }
+    public int AvgHeartRate { get; set; }
     
     [Required(ErrorMessage = "Please enter a date for the run.")]
     [DataType(DataType.Date)]

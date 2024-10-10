@@ -181,16 +181,24 @@ form .form-control {
   margin-bottom: 30px;
   border: none;
   position: relative;
+  overflow: hidden;
 }
 
 .feature-card img {
   object-fit: cover;
   height: 400px;
   border-radius: 0.4rem;
+  transition: all 0.3s ease-in-out;
+  filter: brightness(50%);        /*Dimming at the start*/
+}
+
+.feature-card:hover img {
+  filter: brightness(100%);       /*Returning brightness to normal on hover*/
 }
 
 .card-img-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);  /*For readability*/
   border-radius: 0.5rem;
 }
 

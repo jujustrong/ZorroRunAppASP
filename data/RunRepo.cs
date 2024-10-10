@@ -25,21 +25,21 @@ public class RunRepo : IRunRepo
     
     public void LogRun(Run run)
     {
-        _connection.Execute("INSERT INTO Runs (Date, ElevationGain, Location, Distance, HeartRate, RunType) " +
-                            "VALUES (@date, @elevationGain, @location, @distance, @heartRate, @runType);", new
+        _connection.Execute("INSERT INTO Runs (Date, ElevationGain, Location, Distance, AvgHeartRate, RunType) " +
+                            "VALUES (@date, @elevationGain, @location, @distance, @avgHeartRate, @runType);", new
         {
             date = run.Date, elevationGain = run.ElevationGain, location = run.Location, 
-            distance = run.Distance, heartRate = run.HeartRate, runType = run.RunType
+            distance = run.Distance, avgHeartRate = run.AvgHeartRate, runType = run.RunType
         });
     }
 
     public void UpdateRun(Run run)
     {
         _connection.Execute("UPDATE Runs SET Date = @date, ElevationGain = @elevationGain, Location = @location, " +
-                            "Distance = @distance, HeartRate = @heartRate, RunType = @runType WHERE Id = @id", new
+                            "Distance = @distance, AvgHeartRate = @avgHeartRate, RunType = @runType WHERE Id = @id", new
         {
             date = run.Date, elevationGain = run.ElevationGain, location = run.Location, distance = run.Distance, 
-            heartRate = run.HeartRate, runType = run.RunType, id = run.Id
+            avgHeartRate = run.AvgHeartRate, runType = run.RunType, id = run.Id
         });
     }
 
@@ -47,5 +47,11 @@ public class RunRepo : IRunRepo
     {
         _connection.Execute("DELETE FROM Runs WHERE Id = @Id;", new { Id = id });
         // _connection.Execute("DELETE FROM runs WHERE DATE = @date;", new { date = run.Date });
+    }
+
+    public IEnumerable<RunDetail> GetRunDetailsByRunId(int runId)
+    {
+        return _connection.Query<RunDetail>("SELECT Mile, Pace, HeartRate FROM RunDetails WHERE RunId = @RunId",
+            new { RunId = runId }).ToList();
     }
 }
